@@ -54,5 +54,3 @@ There should be a separate finding for each vulnerability found.
 What recommendations would you give to GoodCorp?
 
 
-
-![image](https://user-images.githubusercontent.com/93218323/160717386-262c052a-ee7b-4759-89e4-4b8830337577.png)
