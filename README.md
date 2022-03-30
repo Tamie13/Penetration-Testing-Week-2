@@ -139,7 +139,7 @@ To solidify the legitimacy of the security testing and highlight the vulnerabili
   -  It should be noted that no other IP addresses were exploited and no changes were made to files or the configuration of the CEO's workstation during this testing.
 
 The find other possible exploits the local `workstation` was searched:
-   -  Command To Use Exploit Suggester = `run post/multi/recon/local_exploit_suggestor
+   -  Command To Use Exploit Suggester = `run post/multi/recon/local_exploit_suggestor`
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Exploit%20Suggester%20Run.png)
   
