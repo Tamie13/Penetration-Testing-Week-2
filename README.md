@@ -79,7 +79,7 @@ A more generic search focused on the word `cast` was also ran to compare results
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Generic%20search%20for%20'cast'.png)
   
- -  Module Found In Both Searches = /exploit/windows/http/icecast_header
+ -  Module Found In Both Searches = `/exploit/windows/http/icecast_header`
   
 To load the module for exploit you can use the entire path of the module found or you can use the number in front of the module as can be seen in image above.
   
