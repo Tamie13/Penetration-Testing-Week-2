@@ -75,16 +75,17 @@ Next, penetration testing software called `Metasploit` was used to continue test
 A more generic search focused on the word `cast` was also ran to compare results of the search (see below):
   
 * Command To Search For Just 'cast': `search cast`
-
-  -  Module Found In Both Searches = /exploit/windows/http/icecast_header
   
-To load the module for exploit you can use the entire path of the module found or you can use the number in front of the module as we have done in the image below.
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Generic%20search%20for%20'cast'.png)
+  
+ -  Module Found In Both Searches = /exploit/windows/http/icecast_header
+  
+To load the module for exploit you can use the entire path of the module found or you can use the number in front of the module as can be seen in image above.
   
   -  Command To Use Entire Path Module = `use /exploit/windows/http/icecast_header` 
   -  Command Using Just Number = `use 23`
   
-  
-![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Generic%20search%20for%20'cast'.png)
   
 Before running the exloit the receiving host of the exploit needs to be set.
    -  Command To Set RHOST = `set RHOST 192.168.0.20`
@@ -134,6 +135,17 @@ Taking the security testing further we were able to exfiltrate the `Drinks.recip
   
 The file was successfully stolen from the CEO's computer as can be seen above.
   
+To solidify the legitimacy of the security testing and highlight the vulnerabilities found additional security testing was ran against the CEO's workstation.
+  -  It should be noted that no other IP addresses were exploited and no changes were made to files or the configuration of the CEO's workstation during this testing.
+
+The find other possible exploits the local `workstation` was searched:
+   -  Command To Use Exploit Suggester = `run post/multi/recon/local_exploit_suggestor
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Exploit%20Suggester%20Run.png)
+  
+Two additional vulnerabilties were found using this command as can be seen above.
+  
+
 
 There should be a separate finding for each vulnerability found.
 
