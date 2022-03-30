@@ -48,18 +48,16 @@ After receiving written permission from GoodCorp Inc. a security test was ran ag
   
 A service and version scan was ran first using nmap to determine the service and version running on the system.  The scan was specifically looking to see if a version of `Icecast` was running on the network.
   
-Command used: nmap -sV 192.168.0.20
+* Command used: `nmap -sV 192.168.0.20`
   -  nmap = network scanner
   -  -sV = specificationt to run a service and version scan
   -  192.168.0.20 = target the scan is being ran against (The CEO's workstation IP address)
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Service%20and%20Version%20Scan.png)
   
-  
-Above you can see that the `Icecast` service was running on the machine.  The next step was to search for any `Icecast` exploits on the machine.
+Above you can see that the `Icecast` service was running on the machine as well as what version was running.  The next step was to search for any `Icecast` exploits on the machine.
 
-Command used: searchsploit icecast
-  
+* Command used: `searchsploit icecast`
   -  searchsploit = security assessment tool for searching offline repositories
   -  icecast = exploit/s being searched for
   
@@ -69,26 +67,58 @@ Above you can see there are multiple `Icecast` exploits available.
   
 Next, penetration testing software called `Metasploit` was used to continue testing. The two images below demonstrate the ability to load and use `Metasploit` to find `Icecast` module/s to use against the target.
   
-*  Command To Start Metasploit:  `msfconsole`
-*  Command To Search For Module:  `search icecast`  
+* Command To Start Metasploit:  `msfconsole`
+* Command To Search For Module:  `search icecast`  
 
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Find%20Icecast%20Module.png)
   
 A more generic search focused on the word `cast` was also ran to compare results of the search (see below):
   
-Command: search cast
+* Command To Search For Just 'cast': `search cast`
 
   -  Module Found In Both Searches = /exploit/windows/http/icecast_header
   
 To load the module for exploit you can use the entire path of the module found or you can use the number in front of the module as we have done in the image below.
   
-  -  Command For Entire Module = `use /exploit/windows/http/icecast_header` 
-  -  Command Using Number = `use 23`
+  -  Command To Use Module = `use /exploit/windows/http/icecast_header` 
+  -  Command Using Just Number = `use 23`
   
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Generic%20search%20for%20'cast'.png)
   
-
+Before running the exloit the receiving host of the exploit needs to be set.
+   -  Command To Set RHOST = `set RHOST 192.168.0.20`
+      * The receiving host or RHOST is the CEO's IP Address
+  
+After setting the RHOST the exploit was run (see below).
+  
+   -  Command To Run The Icecast Exploit = `exploit`
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/exploit%20successful.png)
+  
+As can be seen above the exploit was successful and an `open session` was established with the target, the CEO's workstation.
+  
+The next part of the security test was to see if files that contain the strings `recipe` or `secretfile` could be found.
+  
+   -  Command To Search For `secret` Text File = search -f *secret*.txt
+      * search = command to run a search
+      * -f = indicates that the search is for a file
+      * *secret*.txt = indicate to search all text files containing the word `secret` 
+   
+ 
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/secretfile.txt%20search.png)
+  
+As can be seen above the command was successful in finding a file with `secretfile.txt` and revealed the path to the file.
+  
+   -  Command To Search For `recipe` Text File = search -f *recipe*.txt
+      * search = command to run a search
+      * -f = indicates that the search is for a file
+      * *recipe*.txt = indicate to search all text files containing the word `recipe` 
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/recipe.txt%20search.png)
+  
+Again, the search was successful in finding a file containing the word `recipe` as well as the path to the file.
+  
 
 There should be a separate finding for each vulnerability found.
 
