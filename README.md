@@ -65,7 +65,14 @@ Command used: searchsploit icecast
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Searchsploit%20Icecast.png)
   
+Above you can see there are multiple `Icecast` exploits available. 
+  
+Next, penetration testing software called `Metasploit` was used to continue testing. The two images below demonstrate the ability to load and use `Metasploit` to find `Icecast` module/s to use against the target.
+  
+*  Command To Start Metasploit:  `msfconsole`
+*  Command To Search For Module:  `search icecast`  
 
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Find%20Icecast%20Module.png)
 
 There should be a separate finding for each vulnerability found.
 
