@@ -144,8 +144,8 @@ The find other possible exploits the local `workstation` was searched:
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Exploit%20Suggester%20Run.png)
   
 Two additional vulnerabilties were found using this command as can be seen above but were not run against the CEO's workstation.
-   -  Click [Here](https://nvd.nist.gov/vuln/detail/CVE-2016-3225) for additional information about `exploit/windows/local/ms16_075_refelction as known as `CVE-2016-3225`
-   - Click [Here]() for additional information about `exploit/windows/local/ikeext_service also known as 
+   -  Click [Here](https://nvd.nist.gov/vuln/detail/CVE-2016-3225) for additional information about `exploit/windows/local/ms16_075_refelction` as known as `CVE-2016-3225`
+   - Click [Here](https://www.rapid7.com/db/modules/exploit/windows/local/ikeext_service/) for additional information about `exploit/windows/local/ikeext_service
   
 
 
