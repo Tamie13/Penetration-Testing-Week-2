@@ -35,16 +35,26 @@ The internal penetration test found several alarming vulnerabilities on Hans’ 
 [Click Here For Full Extract On Information Above](https://www.giac.org/paper/gcih/687/remote-exploitation-icecast-201-server/106910)
   
 
-* Severity:
+**Severity:**
 In your expert opinion, how severe is this vulnerability?
   
 The severity of this attack according to CVE was scored at `7.5` highlighting that the compromise of confidentiality, integrity and availabitlity is considerable.
   
 [Click Here For CVE Details](https://www.cvedetails.com/cve/CVE-2004-1561/)
 
-*Proof of Concept:
+## Proof of Concept:
 
-
+After receiving written permission from GoodCorp Inc. a security test was ran against the CEO's workstation.  The following highlights the steps taken to complete the test and the vulnerabilities found during testing.
+  
+A service and version scan was ran first using nmap to determine the service and version running on the system.  Testing was specifically looking for an exploit known as `Icecast`.
+  
+Command used: nmap -sV 192.168.0.20
+  -  nmap = network scanner
+  -  -sV = specificationt to run a service and version scan
+  -  192.168.0.20 = target the scan is being ran against (The CEO's workstation IP address)
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Service%20and%20Version%20Scan.png)
+  
 
 There should be a separate finding for each vulnerability found.
 
