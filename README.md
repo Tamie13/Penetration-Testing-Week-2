@@ -46,7 +46,7 @@ The severity of this attack according to CVE was scored at `7.5` highlighting th
 
 After receiving written permission from GoodCorp Inc. a security test was ran against the CEO's workstation.  The following highlights the steps taken to complete the test and the vulnerabilities found during testing.
   
-A service and version scan was ran first using nmap to determine the service and version running on the system.  Testing was specifically looking for an exploit known as `Icecast`.
+A service and version scan was ran first using nmap to determine the service and version running on the system.  The scan was specifically looking to see if a version of `Icecast` was running on the network.
   
 Command used: nmap -sV 192.168.0.20
   -  nmap = network scanner
@@ -55,6 +55,17 @@ Command used: nmap -sV 192.168.0.20
   
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Service%20and%20Version%20Scan.png)
   
+  
+Above you can see that the `Icecast` service was running on the machine.  The next step was to search for any `Icecast` exploits on the machine.
+
+Command used: searchsploit icecast
+  
+  -  searchsploit = security assessment tool for searching offline repositories
+  -  icecast = exploit/s being searched for
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Searchsploit%20Icecast.png)
+  
+
 
 There should be a separate finding for each vulnerability found.
 
