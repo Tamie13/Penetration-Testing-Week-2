@@ -145,20 +145,33 @@ The find other possible exploits the local `workstation` was searched:
   
 Two additional vulnerabilties were found using this command as can be seen above but were not run against the CEO's workstation.
    -  Click [Here](https://nvd.nist.gov/vuln/detail/CVE-2016-3225) for additional information about `exploit/windows/local/ms16_075_refelction` as known as `CVE-2016-3225`
-   - Click [Here](https://www.rapid7.com/db/modules/exploit/windows/local/ikeext_service/) for additional information about `exploit/windows/local/ikeext_service
+   -  Click [Here](https://www.rapid7.com/db/modules/exploit/windows/local/ikeext_service/) for additional information about `exploit/windows/local/ikeext_service`
+  
+ The directory path for both the `Drinks.recipe.txt` and `User.secretfile.txt` revealed other sensitive files that were able to be exploited as well to include a `password` file.
+  
+    -  Command To See Files In Current Directory = `ls`
+    -  Command To See Contents Of File = `cat password.txt`
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Password%20File.png)
+  
+    -  Command To Enumerate All Logged In Users = `run post/windows/gather/enum_logged_on_users`
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Enumerate%20Users.png)
+  
+    -  Command To Open A Meterpreter Shell = `shell`
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/run%20shell.png)
+  
+    -  Command To Display Target Computer System Information From c:\Users\IEUser\Documents directory = `systeminfo`
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Target%20System%20Information.png)
   
 
 
-
-
-
-
-
-
-
-
-3.	Recommendations
-
-What recommendations would you give to GoodCorp?
+## Mitigation Strategies & Recommendations
+  
+* Update to Icecast 2.0.2 or later
+* Revisit password policies and provide training on how to create complex passwords that would be difficult to break
+* Consider additional security testing and adding `Security HTTP Headers` to prevent vulnerabilities
 
 
