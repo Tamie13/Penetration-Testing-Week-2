@@ -26,7 +26,7 @@ The internal penetration test found several alarming vulnerabilities on Hans’ 
 
 * Vulnerability Exploited:
 
-  - The name of the script or Metasploit module used: `The exploit/windows/http/icecast_header` allows an attacker or threat actor to gain remote control of a victims system by exploiting a buffer overflow which overwrites the memory on the vicitms system using the "icecast" flaw.  The flaw allows for writing past the end of a pointer array when receiving 32 HHTP headers.
+  - The name of the script or Metasploit module used: `The exploit/windows/http/icecast_header` allows an attacker or threat actor to gain remote control of a victims system by exploiting a buffer overflow which overwrites the memory on the vicitms system using the "icecast" flaw.  The flaw allows for writing past the end of a pointer array when receiving information greater than 32 characters (headers).
 
 * Vulnerability Explanation:
 
