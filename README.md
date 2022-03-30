@@ -73,6 +73,22 @@ Next, penetration testing software called `Metasploit` was used to continue test
 *  Command To Search For Module:  `search icecast`  
 
 ![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Find%20Icecast%20Module.png)
+  
+A more generic search focused on the word `cast` was also ran to compare results of the search (see below):
+  
+Command: search cast
+
+  -  Module Found In Both Searches = /exploit/windows/http/icecast_header
+  
+To load the module for exploit you can use the entire path of the module found or you can use the number in front of the module as we have done in the image below.
+  
+  -  Command For Entire Module = `use /exploit/windows/http/icecast_header` 
+  -  Command Using Number = `use 23`
+  
+  
+![TODO](https://github.com/Tamie13/Penetration-Testing-Week-2/blob/main/Unit%2017%20Illustrations/Generic%20search%20for%20'cast'.png)
+  
+
 
 There should be a separate finding for each vulnerability found.
 
