@@ -30,7 +30,7 @@ The internal penetration test found several alarming vulnerabilities on Hans’ 
 
 * Vulnerability Explanation:
 
-  -  If you use audio streaming services like `Spotify` then you've used `Icecast.` It is a streaming media server used by radio stations, online music streaming and other similar platforms that allow you to create list of your favorite music and listen to it anywhere at anytime.  The `Icecast Flaw` is used by attackers and or threat actors to inject malicious code into the `Icecast` overflow buffer.  The `Icecast` server has a maximum set of 32 characters in the client's HTTP request.  If the request is longer than 32 characters (aka headers) then the excess is sent to the stack overflow where it fills the buffers allocated for the overflow.  In this process of buffer overflow is something called an `Extended Instruction Pointer (EIP)` that holds the memory address of the next instruction to execute in the buffer overflow.  It is in the `EIP` that an attack is able to be executed.  Once the overflow fills the buffers allocated it overwrites the `EIP` address space.  If it overwrites with a new `return pointer` it can tell the CPU to go to anaddress which contains `instruction code` which will then be executed.  It is here where a malicious code or unwanted process can be executed by an attacker.
+  -  If you use audio streaming services like `Spotify` then you've used `Icecast.` It is a streaming media server used by radio stations, online music streaming and other similar platforms that allow you to create list of your favorite music and listen to it anywhere at anytime.  The `Icecast Flaw` is used by attackers and or threat actors to inject malicious code into the `Icecast` overflow buffer.  The `Icecast` server has a maximum set of 32 characters in the client's HTTP request.  If the request is longer than 32 characters (aka headers) then the excess is sent to the stack overflow where it fills the buffers allocated for the overflow.  In this process of buffer overflow is something called an `Extended Instruction Pointer (EIP)` that holds the memory address of the next instruction to execute in the buffer overflow.  It is in the `EIP` that an attack is able to be executed.  Once the overflow fills the buffers allocated it overwrites the `EIP` address space.  If it overwrites with a new `return pointer` it can tell the CPU to go to an address which contains `instruction code` which will then be executed.  It is here where a malicious code or unwanted process can be executed by an attacker.
   
 [Click Here For Full Extract On Information Above](https://www.giac.org/paper/gcih/687/remote-exploitation-icecast-201-server/106910)
   
@@ -43,7 +43,6 @@ The severity of this attack according to CVE was scored at `7.5` highlighting th
 [Click Here For CVE Details](https://www.cvedetails.com/cve/CVE-2004-1561/)
 
 *Proof of Concept:
-This is where you show the steps you took. Show the client how you exploited the software services. Please include screenshots.
 
 
 
